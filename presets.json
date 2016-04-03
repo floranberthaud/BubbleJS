@@ -84,6 +84,20 @@
         "stroke": false,
         "backgroundColor": "#000000"
       }
+    },
+    "Chocolate": {
+      "0": {
+        "speed": 1,
+        "oscillation": 2,
+        "bubbleCount": 100,
+        "minimumSize": 5,
+        "maximumSize": 50,
+        "firstBubbleColor": "#beff8a",
+        "secondBubbleColor": "#4258cc",
+        "bubbleRatio": 0.5,
+        "stroke": false,
+        "backgroundColor": "#422c25"
+      }
     }
   },
   "closed": false,
