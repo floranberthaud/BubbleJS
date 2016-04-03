@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, height=device-height, user-scalable=no">
+        <style>body{margin: 0;}canvas[resize]{width: 100%; height: 100%;}</style>
+        <title>BubbleJS</title>
+    </head>
+    <body>
+        <canvas id="bubbleCanvas" resize></canvas>
+        <script type="text/javascript" src="https://code.jquery.com/jquery-2.2.2.min.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/paper.js/0.9.21/paper-full.min.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/dat-gui/0.5.1/dat.gui.min.js"></script>
+        <script type="text/javascript">
+            var presets;
+            $.ajax({
+                url: "presets.json",
+                async: false,
+                datatype: "json",
+                success: function(data) {
+                    presets = data;
+                }
+            });
+            
+            var BubbleJS = function() {
+                this.speed = 1;
+                this.oscillation  = 1;
+                this.bubbleCount = 50;
+                this.minimumSize = 20;
+                this.maximumSize = 80;
+                this.firstBubbleColor = "#00ffff";
+                this.secondBubbleColor = "#ff80ff";
+                this.bubbleRatio = 0.1;
+                this.stroke = false;
+                this.backgroundColor = "#ffffff";
+            };
+            
+            var bubblejs = new BubbleJS();
+            var gui = new dat.GUI({load: presets});
+            gui.remember(bubblejs);
+            
+            gui.add(bubblejs, "speed", 0, 20).name("Vitesse");
+            gui.add(bubblejs, "oscillation", 0, 5).name("Oscillation");
+            gui.add(bubblejs, "bubbleCount", 1, 100).name("Nombre de bulles");
+            gui.add(bubblejs, "minimumSize", 5, 150).name("Taille minimum")
+                .listen()
+                .onChange(function(value){
+                    if(value > bubblejs.maximumSize) {
+                        bubblejs.maximumSize = value;
+                    }
+                });
+            gui.add(bubblejs, "maximumSize", 5, 150).name("Taille maximum")
+                .listen()
+                .onChange(function(value){
+                    if(value < bubblejs.minimumSize) {
+                        bubblejs.minimumSize = value;
+                    }
+                });
+            gui.addColor(bubblejs, "firstBubbleColor").name("Couleur #1");
+            gui.addColor(bubblejs, "secondBubbleColor").name("Couleur #2");
+            gui.add(bubblejs, "bubbleRatio", 0, 1).name("Ratio couleur");
+            gui.add(bubblejs, "stroke").name("Contour");
+            gui.addColor(bubblejs, "backgroundColor").name("Couleur fond")
+                .onChange(function(value){
+                document.body.style.backgroundColor = value;
+                });
+            
+            document.body.style.backgroundColor = bubblejs.backgroundColor;
+        </script>
+        <script type="text/paperscript" src="bubble.js" canvas="bubbleCanvas"></script>
+    </body>
+</html>

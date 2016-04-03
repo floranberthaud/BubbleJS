@@ -1,0 +1,91 @@
+{
+  "preset": "Default",
+  "remembered": {
+    "Default": {
+      "0": {
+        "speed": 1,
+        "oscillation": 1,
+        "bubbleCount": 50,
+        "minimumSize": 20,
+        "maximumSize": 80,
+        "firstBubbleColor": "#00ffff",
+        "secondBubbleColor": "#ff80ff",
+        "bubbleRatio": 0.1,
+        "stroke": false,
+        "backgroundColor": "#ffffff"
+      }
+    },
+    "Stars Wars": {
+      "0": {
+        "speed": 20,
+        "oscillation": 0,
+        "bubbleCount": 10,
+        "minimumSize": 10,
+        "maximumSize": 30,
+        "firstBubbleColor": "#f4ff52",
+        "secondBubbleColor": "#ffffff",
+        "bubbleRatio": 1,
+        "stroke": false,
+        "backgroundColor": "#000000"
+      }
+    },
+    "Jingle Bells": {
+      "0": {
+        "speed": 1.5,
+        "oscillation": 1.8,
+        "bubbleCount": 100,
+        "minimumSize": 20,
+        "maximumSize": 80,
+        "firstBubbleColor": "#ff0000",
+        "secondBubbleColor": "#00ff00",
+        "bubbleRatio": 0.1,
+        "stroke": false,
+        "backgroundColor": "#00640b"
+      }
+    },
+    "Bath": {
+      "0": {
+        "speed": 0.2,
+        "oscillation": 0.2,
+        "bubbleCount": 18,
+        "minimumSize": 20,
+        "maximumSize": 80,
+        "firstBubbleColor": "#ffcafa",
+        "secondBubbleColor": "#ededed",
+        "bubbleRatio": 0.1,
+        "stroke": true,
+        "backgroundColor": "#cff6ff"
+      }
+    },
+    "Night": {
+      "0": {
+        "speed": 0.4,
+        "oscillation": 0.1,
+        "bubbleCount": 43,
+        "minimumSize": 100,
+        "maximumSize": 100,
+        "firstBubbleColor": "#000000",
+        "secondBubbleColor": "#000000",
+        "bubbleRatio": 0.1,
+        "stroke": false,
+        "backgroundColor": "#0000ff"
+      }
+    },
+    "Smoke": {
+      "0": {
+        "speed": 5,
+        "oscillation": 2.3,
+        "bubbleCount": 100,
+        "minimumSize": 5,
+        "maximumSize": 150,
+        "firstBubbleColor": "#464646",
+        "secondBubbleColor": "#ffffff",
+        "bubbleRatio": 0.8,
+        "stroke": false,
+        "backgroundColor": "#000000"
+      }
+    }
+  },
+  "closed": false,
+  "folders": {}
+}
