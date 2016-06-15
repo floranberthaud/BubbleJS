@@ -12,7 +12,8 @@
         "secondBubbleColor": "#ff80ff",
         "bubbleRatio": 0.1,
         "stroke": false,
-        "backgroundColor": "#ffffff"
+        "backgroundColor": "#ffffff",
+        "blurSize": 0
       }
     },
     "Stars Wars": {
@@ -26,7 +27,8 @@
         "secondBubbleColor": "#ffffff",
         "bubbleRatio": 1,
         "stroke": false,
-        "backgroundColor": "#000000"
+        "backgroundColor": "#000000",
+        "blurSize": 0
       }
     },
     "Jingle Bells": {
@@ -40,7 +42,8 @@
         "secondBubbleColor": "#00ff00",
         "bubbleRatio": 0.1,
         "stroke": false,
-        "backgroundColor": "#00640b"
+        "backgroundColor": "#00640b",
+        "blurSize": 0
       }
     },
     "Bath": {
@@ -54,7 +57,8 @@
         "secondBubbleColor": "#ededed",
         "bubbleRatio": 0.1,
         "stroke": true,
-        "backgroundColor": "#cff6ff"
+        "backgroundColor": "#cff6ff",
+        "blurSize": 0
       }
     },
     "Night": {
@@ -68,10 +72,11 @@
         "secondBubbleColor": "#000000",
         "bubbleRatio": 0.1,
         "stroke": false,
-        "backgroundColor": "#0000ff"
+        "backgroundColor": "#0000ff",
+        "blurSize": 0
       }
     },
-    "Smoke": {
+    "Steam": {
       "0": {
         "speed": 5,
         "oscillation": 2.3,
@@ -82,7 +87,8 @@
         "secondBubbleColor": "#ffffff",
         "bubbleRatio": 0.8,
         "stroke": false,
-        "backgroundColor": "#000000"
+        "backgroundColor": "#000000",
+        "blurSize": 50
       }
     },
     "Chocolate": {
@@ -96,7 +102,8 @@
         "secondBubbleColor": "#4258cc",
         "bubbleRatio": 0.5,
         "stroke": false,
-        "backgroundColor": "#422c25"
+        "backgroundColor": "#422c25",
+        "blurSize": 0
       }
     }
   },

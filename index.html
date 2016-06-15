@@ -32,6 +32,7 @@
                 this.bubbleRatio = 0.1;
                 this.stroke = false;
                 this.backgroundColor = "#ffffff";
+                this.blurSize = 0;
             };
             
             var bubblejs = new BubbleJS();
@@ -62,6 +63,10 @@
             gui.addColor(bubblejs, "backgroundColor").name("Couleur fond")
                 .onChange(function(value){
                 document.body.style.backgroundColor = value;
+                });
+            gui.add(bubblejs, "blurSize", 0, 50).name("Taille du flou")
+                .onChange(function(value){
+                    bubbleCanvas.style.webkitFilter = "blur(" + value +"px)";
                 });
             
             document.body.style.backgroundColor = bubblejs.backgroundColor;
