@@ -11,6 +11,8 @@
         <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/paper.js/0.9.21/paper-full.min.js"></script>
         <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/dat-gui/0.5.1/dat.gui.min.js"></script>
         <script type="text/javascript">
+
+            //Load the presets
             var presets;
             $.ajax({
                 url: "presets.json",
@@ -21,6 +23,7 @@
                 }
             });
             
+            //Create the parameters menu
             var BubbleJS = function() {
                 this.speed = 1;
                 this.oscillation  = 1;
@@ -43,14 +46,14 @@
             gui.add(bubblejs, "oscillation", 0, 5).name("Oscillation");
             gui.add(bubblejs, "bubbleCount", 1, 100).name("Nombre de bulles");
             gui.add(bubblejs, "minimumSize", 5, 150).name("Taille minimum")
-                .listen()
+                .listen() //Enable exterior value changes
                 .onChange(function(value){
                     if(value > bubblejs.maximumSize) {
                         bubblejs.maximumSize = value;
                     }
                 });
             gui.add(bubblejs, "maximumSize", 5, 150).name("Taille maximum")
-                .listen()
+                .listen() //Enable exterior value changes
                 .onChange(function(value){
                     if(value < bubblejs.minimumSize) {
                         bubblejs.minimumSize = value;
